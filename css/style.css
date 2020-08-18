@@ -17,8 +17,8 @@ body {
   font-family: "Raleway", sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: #fff;
-  color: #333;
+  background-color: var(--dark-color);
+  color: var(--light-color);
 }
 
 a {
@@ -40,8 +40,8 @@ img {
   margin: auto;
   overflow: hidden;
   padding: 0 2rem;
-  margin-top: 6rem;
-  margin-bottom: 3rem;
+  /* margin-top: 6rem;
+  margin-bottom: 3rem; */
 }
 
 /* Text Styles*/
@@ -252,7 +252,7 @@ img {
   align-items: center;
   padding: 0.7rem 2rem;
   position: fixed;
-  z-index: 1;
+  z-index: 200;
   width: 100%;
   top: 0;
   opacity: 0.9;
@@ -309,11 +309,7 @@ img {
 /* Profile Page */
 .profile-grid {
   display: grid;
-  grid-template-areas:
-    "top top"
-    "about about"
-    "exp edu"
-    "github github";
+  grid-template-areas: "exp edu edu";
   grid-gap: 1rem;
 }
 
@@ -381,9 +377,11 @@ img {
   margin: 0.5rem 0;
 }
 
-
 /* Mobile Styles */
 @media (max-width: 700px) {
+  .row {
+    margin-top: 20%;
+  }
   .container {
     margin-top: 8rem;
   }
@@ -407,6 +405,7 @@ img {
 
   /* Navbar */
   .navbar {
+    position: relative;
     display: block;
     text-align: center;
   }
@@ -460,4 +459,133 @@ img {
     width: 100%;
     margin-bottom: 0.2rem;
   }
+}
 
+/* Skill Card */
+
+.skill-card {
+  margin-top: 110px;
+  margin-left: auto;
+  width: 90%;
+  min-width: 300px;
+  height: 400px;
+  min-height: 356px;
+  background: var(--dark-color);
+  border-radius: 30px;
+  position: relative;
+  z-index: 10;
+  /* margin: 25px; */
+  transition: all 0.25s ease;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+.skill-card:hover {
+  transform: translate(0, -10px);
+  /* box-shadow: 0px 17px 35px 0px rgba(0,0,0,.07); */
+}
+
+.skill-card:hover .con-img {
+  transform: translate(0, -15px);
+  /* box-shadow: 0px 17px 35px 0px rgba(0,0,0,.07); */
+}
+
+.skill-card:hover .con-img img.blur {
+  opacity: 0.45;
+  transform: translate(-10px, 26px) scale(0.85);
+  /* box-shadow: 0px 17px 35px 0px rgba(0,0,0,.07); */
+}
+
+.skill-card h3 {
+  position: absolute;
+  /* font-family: 'Courier New', Courier, monospace; */
+  /* left: 0; */
+  top: 0;
+  padding: 15px;
+}
+
+.skill-card i.bx {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  padding: 15px;
+  font-size: 1.3rem;
+}
+
+.skill-card .con-text {
+  padding: 20px;
+}
+
+/* .skill-card h2 {
+
+} */
+
+.skill-card p {
+  /* font-family: 'Courier New', Courier, monospace; */
+  font-size: 0.8rem;
+  opacity: 0.6;
+  margin-top: 10px;
+}
+
+.skill-card .con-img {
+  width: calc(100% - 60px);
+  margin: 0px 30px;
+  margin-top: -90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.35s ease-out;
+}
+
+.skill-card img {
+  height: 160px;
+}
+
+.skill-card img.blur {
+  position: absolute;
+  filter: blur(15px);
+  z-index: -1;
+  opacity: 0.35;
+  transform: translate(-10px, 10px) scale(0.85);
+  transition: all.35s ease-out;
+}
+
+.content {
+  color: var(--light-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--dark-color);
+  width: 100vw;
+  height: 100vh;
+  /* overflow: hidden; */
+}
+
+/* Card 3 column*/
+.row {
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+}
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the 4 columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .content {
+    margin-top: 3rem;
+  }
+  .column {
+    width: 100%;
+  }
+}
