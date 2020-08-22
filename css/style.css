@@ -314,14 +314,6 @@ img {
   margin-bottom: 1rem;
 }
 
-/* Sample page */
-.sample-grid {
-  display: grid;
-  grid-template-areas:
-    "top about about"
-    "top exp edu";
-  grid-gap: 1rem;
-}
 /* Profile Page */
 .profile-grid {
   display: grid;
@@ -657,7 +649,7 @@ img {
   margin-left: auto;
   width: 90%;
   min-width: 300px;
-  height: 650px;
+  height: 680px;
   min-height: 356px;
   border-radius: 30px;
   position: relative;
@@ -738,6 +730,13 @@ img {
 }
 
 .logo-xs {
-  width: 10%;
-  height: 10%;
+  width: 7%;
+  height: 7%;
+}
+
+.cont-micro-logos {
+  background: lightgray;
+  margin-top: 1px;
+  padding: 1px;
+  border-radius: 5px;
 }
