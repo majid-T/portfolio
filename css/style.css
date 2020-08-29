@@ -569,6 +569,8 @@ img {
 
 .skill-card img {
   height: 160px;
+  width: 160px;
+  margin-top: 24px;
 }
 
 .skill-card img.blur {
