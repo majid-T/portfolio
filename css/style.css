@@ -242,10 +242,10 @@ img {
   height: 100%;
 }
 
-.grey-background{
+.grey-background {
   background-color: rgba(62, 62, 62, 0.5);
   border-radius: 5px;
-    position: absolute;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -369,7 +369,6 @@ img {
 
 .profile-exp {
   grid-area: exp;
-
 }
 
 .profile-edu {
@@ -745,6 +744,11 @@ img {
 .logo-xs {
   width: 7%;
   height: 7%;
+}
+
+.logo-32px {
+  height: 32px;
+  width: 32px;
 }
 
 .cont-micro-logos {
